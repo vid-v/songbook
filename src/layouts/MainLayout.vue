@@ -12,7 +12,6 @@
         />
 
         <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
-          <!-- <q-icon :name="fabYoutube" color="red" size="28px" /> -->
           <q-toolbar-title shrink class="text-weight-bold">
             Cantari
           </q-toolbar-title>
@@ -67,7 +66,6 @@
         </q-list>
       </q-scroll-area>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -75,9 +73,8 @@
 </template>
 
 <script>
-import { fabYoutube } from '@quasar/extras/fontawesome-v5'
 export default {
-  name: 'MyLayout',
+  name: 'SongBook',
   data () {
     return {
       leftDrawerOpen: true,
@@ -91,9 +88,6 @@ export default {
         { icon: 'folder', text: 'Tineret' }
       ]
     }
-  },
-  created () {
-    this.fabYoutube = fabYoutube
   }
 }
 </script>
