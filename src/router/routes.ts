@@ -2,14 +2,12 @@ import { RouteConfig } from 'vue-router'
 
 const routes: RouteConfig[] = [
   {
-    path: '/',
+    path: '',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/Index.vue') }]
-  },
-  {
-    path: '/pdc/',
-    component: () => import('components/Pdc.vue'),
-    children: [{ path: '', component: () => import('components/Pdc.vue') }]
+    children: [
+      { path: '', component: () => import('pages/Index.vue') },
+      { path: 'pdc', component: () => import('components/Pdc.vue') }
+    ]
   }
   // {
   //   path: '/ld/',

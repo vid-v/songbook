@@ -1,69 +1,40 @@
 <template>
-  <div class="q-pa-md">
-    <q-carousel
-      v-model="slide"
-      swipeable
-      animated
-      :padding="padding"
-      :vertical="vertical"
-      :arrows="arrows"
-      :navigation="navigation"
-      :navigation-position="navPos"
-      height="300px"
-      class="bg-purple text-white rounded-borders"
-    >
-      <q-carousel-slide name="style" class="column no-wrap flex-center">
-        <q-icon name="style" size="56px" />
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="tv" class="column no-wrap flex-center">
-        <q-icon name="live_tv" size="56px" />
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="layers" class="column no-wrap flex-center">
-        <q-icon name="layers" size="56px" />
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="map" class="column no-wrap flex-center">
-        <q-icon name="terrain" size="56px" />
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-  </div>
+  <q-page padding class="row">
+    <div style="width: 100%; max-width: auto;">
+      <q-infinite-scroll :handler="refresher">
+
+          <q-item clickable v-ripple v-for="(item, index) in items" :key="index" class="caption">
+            <q-item-section>
+              <q-item-label>{{ index + 1 }}. {{ item.name }}</q-item-label>
+            </q-item-section>
+          </q-item>
+
+      </q-infinite-scroll>
+    </div>
+  </q-page>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      padding: true,
-      vertical: false,
-      arrows: true,
-      navigation: true,
-      navPos: 'bottom',
-      navigationPositions: [
-        { value: 'top', label: 'top' },
-        { value: 'right', label: 'right' },
-        { value: 'bottom', label: 'bottom (default)' },
-        { value: 'left', label: 'left' }
-      ],
-      slide: 'style',
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      items: [
+        {"id":"1","name": "Laudă pe Domnul, o, suflete", "versuri": [{"1":"Laudă pe Domnul, o, suflete,","2":"Laudă pe Domnul ce ţine","3":"Laudă pe Domnul,","4":"Lăudaţi toţi pe Domnul"}]},
+        {"id":"2","name": "Doamne sfinte, Te mărim", "versuri": [{"1":"Doamne sfinte, Te mărim,","2":"Cetele cereşti în cor","3":"Pe pământ, necontenit,","4":"Şi având al Tău Cuvânt"}]},
+        {"id":"3","name": "La picioare-Ţi, o, Isuse", "versuri": [{"1":"La picioare-Ţi, o, Isuse,","2":"Ah, vorbeşte-mi, căci doreşte","3":"Tot ce-i rău acum să piară,","4":"Ah, vorbeşte-mi, căci doreşte"}]},
+      ]
     }
   },
-  watch: {
-    vertical (val) {
-      this.navPos = val === true
-        ? 'right'
-        : 'bottom'
+  methods: {
+    refresher (index, done) {
+      setTimeout(() => {
+        let items = []
+        for (let i = 0; i < 7; i++) {
+          items.push({})
+        }
+        this.items = this.items.concat(items)
+        done()
+      }, 2500)
     }
   }
 }
