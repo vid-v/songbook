@@ -40,7 +40,12 @@
           <q-item-label header class="text-weight-bold text-uppercase">
             Carti de cantari
           </q-item-label>
-          <q-item v-for="link in links1" :key="link.text" v-ripple clickable>
+          <q-item
+            v-for="link in links1" :key="link.text" :href="link.page"
+            v-ripple
+            clickable
+            tag="a"
+            >
             <q-item-section avatar>
               <q-icon color="grey" :name="link.icon" />
             </q-item-section>
@@ -80,12 +85,12 @@ export default {
       leftDrawerOpen: true,
       search: '',
       links1: [
-        { icon: 'folder', text: 'Pe Drumul Credintei' },
-        { icon: 'folder', text: 'Laudele Domnului' },
-        { icon: 'folder', text: 'Imnuri' }
+        { icon: 'folder', text: 'Pe Drumul Credintei', page: '#/pdc' },
+        { icon: 'folder', text: 'Laudele Domnului', page: '#/ld' },
+        { icon: 'folder', text: 'Imnuri', page: '#/imnuri' }
       ],
       links2: [
-        { icon: 'folder', text: 'Tineret' }
+        { icon: 'folder', text: 'Tineret', page: '#/tineret' }
       ]
     }
   }
