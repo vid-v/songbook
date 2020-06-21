@@ -6,24 +6,12 @@ const routes: RouteConfig[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
-      { path: 'pdc', component: () => import('components/Pdc.vue') }
+      { path: 'pdc', component: () => import('components/Pdc.vue') },
+      { path: 'ld', component: () => import('components/Ld.vue') },
+      { path: 'imnuri', component: () => import('components/Imnuri.vue') },
+      { path: 'tineri', component: () => import('components/Tineri.vue') }
     ]
   }
-  // {
-  //   path: '/ld/',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [{ path: '', component: () => import('pages/Index.vue') }]
-  // },
-  // {
-  //   path: '/imnuri/',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [{ path: '', component: () => import('pages/Index.vue') }]
-  // },
-  // {
-  //   path: '/altele/',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [{ path: '', component: () => import('pages/Index.vue') }]
-  // }
 ]
 
 // Always leave this as last one
