@@ -14,24 +14,21 @@
         :fullscreen.sync="fullscreen"
       >
         <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <div class="q-mt-md text-center" style="font-size: 2em">
+            {{ lorem }}
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="tv" class="column no-wrap flex-center" style="font-size: 2em">
           <div class="q-mt-md text-center">
             {{ lorem }}
           </div>
         </q-carousel-slide>
-        <q-carousel-slide name="tv" class="column no-wrap flex-center">
-          <q-icon name="live_tv" size="56px"></q-icon>
+        <q-carousel-slide name="layers" class="column no-wrap flex-center" style="font-size: 2em">
           <div class="q-mt-md text-center">
             {{ lorem }}
           </div>
         </q-carousel-slide>
-        <q-carousel-slide name="layers" class="column no-wrap flex-center">
-          <q-icon name="layers" size="56px"></q-icon>
-          <div class="q-mt-md text-center">
-            {{ lorem }}
-          </div>
-        </q-carousel-slide>
-        <q-carousel-slide name="map" class="column no-wrap flex-center">
-          <q-icon name="terrain" size="56px"></q-icon>
+        <q-carousel-slide name="map" class="column no-wrap flex-center" style="font-size: 2em">
           <div class="q-mt-md text-center">
             {{ lorem }}
           </div>
@@ -87,6 +84,7 @@ myStyle (offset) {
   const size = `calc(100vh - ${offset}px)`
   return {
     minHeight: size,
-    height: size
+    height: size,
+    font-size: 40px
   }
 }

@@ -12,7 +12,10 @@
         />
 
         <q-btn flat no-caps no-wrap class="q-ml-xs" v-if="$q.screen.gt.xs">
-          <q-toolbar-title shrink class="text-weight-bold">
+          <q-toolbar-title shrink class="text-weight-bold"
+            :href="home"
+            tag="a"
+          >
             Cantari
           </q-toolbar-title>
         </q-btn>

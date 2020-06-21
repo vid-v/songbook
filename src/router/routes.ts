@@ -1,15 +1,20 @@
 import { RouteConfig } from 'vue-router'
+import { MainLayout } from 'layouts/MainLayout'
+import { Pdc } from 'pages/Pdc'
+import { Ld } from 'pages/Ld'
+import { Imnuri } from 'pages/Imnuri'
+import { Tineri } from 'pages/Tineri'
 
 const routes: RouteConfig[] = [
   {
-    path: '',
+    path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
-      { path: 'pdc', component: () => import('components/Pdc.vue') },
-      { path: 'ld', component: () => import('components/Ld.vue') },
-      { path: 'imnuri', component: () => import('components/Imnuri.vue') },
-      { path: 'tineri', component: () => import('components/Tineri.vue') }
+      { path: '/', component: () => import('pages/Index.vue') },
+      { path: 'pdc', component: () => import('pages/Pdc.vue') },
+      { path: 'ld', component: () => import('pages/Ld.vue') },
+      { path: 'imnuri', component: () => import('pages/Imnuri.vue') },
+      { path: 'tineri', component: () => import('pages/Tineri.vue') }
     ]
   }
 ]
