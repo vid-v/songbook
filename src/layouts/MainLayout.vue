@@ -47,7 +47,7 @@
             tag="a"
             >
             <q-item-section avatar>
-              <q-icon color="grey" :name="link.icon" />
+              <q-icon :color="link.color" :name="link.icon" />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ link.text }}</q-item-label>
@@ -60,9 +60,13 @@
             Alte Cantari
           </q-item-label>
 
-          <q-item v-for="link in links2" :key="link.text" v-ripple clickable>
+          <q-item
+            v-for="link in links2" :key="link.text" :href="link.page"
+            v-ripple clickable
+            tag="a"
+            >
             <q-item-section avatar>
-              <q-icon color="grey" :name="link.icon" />
+              <q-icon :color="link.color" :name="link.icon" />
             </q-item-section>
             <q-item-section>
               <q-item-label>{{ link.text }}</q-item-label>
@@ -85,12 +89,12 @@ export default {
       leftDrawerOpen: true,
       search: '',
       links1: [
-        { icon: 'folder', text: 'Pe Drumul Credintei', page: '#/pdc' },
-        { icon: 'folder', text: 'Laudele Domnului', page: '#/ld' },
-        { icon: 'folder', text: 'Imnuri', page: '#/imnuri' }
+        { icon: 'folder', text: 'Pe Drumul Credintei', page: '#/pdc', color: 'dark' },
+        { icon: 'folder', text: 'Laudele Domnului', page: '#/ld', color: 'negative' },
+        { icon: 'folder', text: 'Imnuri', page: '#/imnuri', color: 'primary' }
       ],
       links2: [
-        { icon: 'folder', text: 'Tineret', page: '#/tineret' }
+        { icon: 'folder', text: 'Tineret', page: '#/tineri', color: 'accent' }
       ]
     }
   }
