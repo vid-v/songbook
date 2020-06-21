@@ -133,9 +133,9 @@ module.exports = configure(function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'cantari',
-        short_name: 'cantari',
-        description: 'Versuri Crestine',
+        name: 'Versuri Cantari Crestine',
+        short_name: 'versuri',
+        description: 'Versuri Cantari Crestine',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -201,7 +201,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'cantari'
+        appId: 'songbook'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
