@@ -1,6 +1,9 @@
-# cantari (cantari)
+# Aplicatie Web: Versuri cantari crestine
+###### PDC: Pe Drumul Credintei
+###### LD: Laudele Domnului
 
-Versuri Crestine
+
+----
 
 ## Install the dependencies
 ```bash
