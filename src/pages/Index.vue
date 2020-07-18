@@ -1,5 +1,10 @@
 <template>
   <div id="q-app" :style-fn="myStyle">
+    <div class="q-pa-md q-gutter-sm">
+      <q-breadcrumbs>
+        <q-breadcrumbs-el icon="Home" to="/"></q-breadcrumbs-el>
+      </q-breadcrumbs>
+    </div>
     <div class="q-pa-md">
       <q-carousel
         v-model="slide"

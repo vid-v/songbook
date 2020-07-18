@@ -10,7 +10,7 @@ const routes: RouteConfig[] = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/', component: () => import('pages/Index.vue') },
+      { path: '', component: () => import('pages/Index.vue') },
       { path: 'pdc', component: () => import('pages/Pdc.vue') },
       { path: 'ld', component: () => import('pages/Ld.vue') },
       { path: 'imnuri', component: () => import('pages/Imnuri.vue') },
