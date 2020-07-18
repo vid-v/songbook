@@ -1,9 +1,4 @@
 import { RouteConfig } from 'vue-router'
-import { MainLayout } from 'layouts/MainLayout'
-import { Pdc } from 'pages/Pdc'
-import { Ld } from 'pages/Ld'
-import { Imnuri } from 'pages/Imnuri'
-import { Tineri } from 'pages/Tineri'
 
 const routes: RouteConfig[] = [
   {
@@ -22,7 +17,7 @@ const routes: RouteConfig[] = [
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {
   routes.push({
-    path: '*',
+    path: '/',
     component: () => import('pages/Error404.vue')
   })
 }
