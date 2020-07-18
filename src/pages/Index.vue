@@ -1,8 +1,7 @@
 <template>
   <div id="q-app" :style-fn="myStyle">
     <div class="q-pa-md">
-      <q-responsive :ratio="1" class="col">
-
+      <q-responsive :ratio="16/8.7" style="max-height: auto;" class="col">
         <q-carousel
           v-model="slide"
           swipeable
