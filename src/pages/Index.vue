@@ -42,7 +42,7 @@
             <q-btn
               push round dense color="bg-grey" text-color="white"
               :icon="fullscreen ? 'fullscreen_exit' : 'fullscreen'"
-              @click="fullscreen = !fullscreen"
+              @click="toggle"
             />
           </q-carousel-control>
         </template>
@@ -77,6 +77,20 @@ export default {
       this.navPos = val === true
         ? 'right'
         : 'bottom'
+    }
+  },
+  methods: {
+    toggle (e) {
+      const target = e.target.parentNode.parentNode.parentNode.parentNode.parentNode
+      this.$q.fullscreen.toggle(target)
+        .then(() => {
+          // success!
+        })
+        .catch((err) => {
+          alert(err)
+          // uh, oh, error!!
+          // console.error(err)
+        })
     }
   }
 }
