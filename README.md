@@ -1,4 +1,6 @@
 # Aplicatie Web: Versuri cantari crestine
+##### PR sunt binevenite si apreciate.
+
 ###### PDC: Pe Drumul Credintei
 ###### LD: Laudele Domnului
 
