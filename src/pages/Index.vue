@@ -41,7 +41,7 @@
           >
             <q-btn
               push round dense color="bg-grey" text-color="white"
-              :icon="fullscreen ? 'fullscreen_exit' : 'fullscreen'"
+              :icon="fullscreen ? 'fullscreen' : 'fullscreen_exit'"
               @click="toggle"
             />
           </q-carousel-control>
@@ -69,7 +69,7 @@ export default {
         { value: 'left', label: 'left' }
       ],
       slide: 'style',
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      lorem: 'versuri'
     }
   },
   watch: {

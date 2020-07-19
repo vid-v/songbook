@@ -18,9 +18,9 @@ export default {
   data () {
     return {
       items: [
-        {"id":"1","name": "Imn: Laudă pe Domnul, o, suflete", "versuri": [{"1":"Imn: Laudă pe Domnul, o, suflete,","2":"Laudă pe Domnul ce ţine","3":"Laudă pe Domnul,","4":"Lăudaţi toţi pe Domnul"}]},
-        {"id":"2","name": "Imn: Doamne sfinte, Te mărim", "versuri": [{"1":"Imn: Doamne sfinte, Te mărim,","2":"Cetele cereşti în cor","3":"Pe pământ, necontenit,","4":"Şi având al Tău Cuvânt"}]},
-        {"id":"3","name": "Imn: La picioare-Ţi, o, Isuse", "versuri": [{"1":"Imn: La picioare-Ţi, o, Isuse,","2":"Ah, vorbeşte-mi, căci doreşte","3":"Tot ce-i rău acum să piară,","4":"Ah, vorbeşte-mi, căci doreşte"}]},
+        { id: '1', name: 'Imn: Laudă pe Domnul, o, suflete', versuri: [{ 1: 'Imn: Laudă pe Domnul, o, suflete,', 2: 'Laudă pe Domnul ce ţine', 3: 'Laudă pe Domnul,', 4: 'Lăudaţi toţi pe Domnul' }] },
+        { id: '2', name: 'Imn: Doamne sfinte, Te mărim', versuri: [{ 1: 'Imn: Doamne sfinte, Te mărim,', 2: 'Cetele cereşti în cor', 3: 'Pe pământ, necontenit,', 4: 'Şi având al Tău Cuvânt' }] },
+        { id: '3', name: 'Imn: La picioare-Ţi, o, Isuse', versuri: [{ 1: 'Imn: La picioare-Ţi, o, Isuse,', 2: 'Ah, vorbeşte-mi, căci doreşte', 3: 'Tot ce-i rău acum să piară,', 4: 'Ah, vorbeşte-mi, căci doreşte' }] }
       ]
     }
   }

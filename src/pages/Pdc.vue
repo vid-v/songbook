@@ -19,16 +19,16 @@ export default {
   data () {
     return {
       items: [
-        {"id":"1","name": "Laudă pe Domnul, o, suflete", "versuri": [{"1":"Laudă pe Domnul, o, suflete,","2":"Laudă pe Domnul ce ţine","3":"Laudă pe Domnul,","4":"Lăudaţi toţi pe Domnul"}]},
-        {"id":"2","name": "Doamne sfinte, Te mărim", "versuri": [{"1":"Doamne sfinte, Te mărim,","2":"Cetele cereşti în cor","3":"Pe pământ, necontenit,","4":"Şi având al Tău Cuvânt"}]},
-        {"id":"3","name": "La picioare-Ţi, o, Isuse", "versuri": [{"1":"La picioare-Ţi, o, Isuse,","2":"Ah, vorbeşte-mi, căci doreşte","3":"Tot ce-i rău acum să piară,","4":"Ah, vorbeşte-mi, căci doreşte"}]},
+        { id: '1', name: 'Laudă pe Domnul, o, suflete', path: 'assets/pdc/1.txt' },
+        { id: '2', name: 'Doamne sfinte, Te mărim', path: 'assets/pdc/1.txt' },
+        { id: '3', name: 'La picioare-Ţi, o, Isuse', path: 'assets/pdc/1.txt' }
       ]
     }
   },
   methods: {
     refresher (index, done) {
       setTimeout(() => {
-        let items = []
+        const items = []
         for (let i = 0; i < 7; i++) {
           items.push({})
         }
