@@ -69,7 +69,7 @@ export default {
         { value: 'left', label: 'left' }
       ],
       slide: 'style',
-      lorem: 'versuri'
+      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
     }
   },
   watch: {
