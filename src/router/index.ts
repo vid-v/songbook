@@ -2,6 +2,7 @@ import { route } from 'quasar/wrappers'
 import VueRouter from 'vue-router'
 import { StoreInterface } from '../store'
 import routes from './routes'
+import VueResource from 'vue-resource'
 
 /*
  * If not building with SSR mode, you can
@@ -10,6 +11,8 @@ import routes from './routes'
 
 export default route<StoreInterface>(function ({ Vue }) {
   Vue.use(VueRouter)
+  Vue.use(VueResource)
+  Vue.http.options.root = './songbook/src/assets/'
 
   const Router = new VueRouter({
     scrollBehavior: () => ({ x: 0, y: 0 }),

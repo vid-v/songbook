@@ -1,5 +1,5 @@
 {
-  "name": "Cantari Crestine",
+  "name": "CantariCrestine",
   "version": "0.0.1",
   "description": "Versuri Crestine",
   "productName": "Versuri Crestine",
@@ -19,6 +19,7 @@
     "quasar": "^1.9.5",
     "vue-carousel": "^0.18.0",
     "vue-i18n": "^8.0.0",
+    "vue-resource": "^1.5.1",
     "vue-sidebar-menu": "^4.6.0",
     "yaml-js": "^0.2.3"
   },

@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app" :style-fn="myStyle">
+  <div id="q-app">
     <div class="q-pa-md">
       <q-responsive :ratio="16/8.7" style="max-height: auto;" class="col">
         <q-carousel
@@ -95,12 +95,3 @@ export default {
   }
 }
 </script>
-
-myStyle (offset) {
-  const size = `calc(100vh - ${offset}px)`
-  return {
-    minHeight: size,
-    height: size,
-    font-size: 40px
-  }
-}

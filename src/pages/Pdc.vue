@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="row">
     <div style="width: 100%; max-width: auto;">
-      <q-infinite-scroll :handler="refresher">
+      <q-infinite-scroll>
 
           <q-item clickable v-ripple v-for="(item, index) in items" :key="index" class="caption">
             <q-item-section>
@@ -26,16 +26,6 @@ export default {
     }
   },
   methods: {
-    refresher (index, done) {
-      setTimeout(() => {
-        const items = []
-        for (let i = 0; i < 7; i++) {
-          items.push({})
-        }
-        this.items = this.items.concat(items)
-        done()
-      }, 2500)
-    }
   }
 }
 </script>

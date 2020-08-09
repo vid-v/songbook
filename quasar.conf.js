@@ -133,9 +133,9 @@ module.exports = configure(function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Versuri Cantari Crestine',
+        name: 'VersuriCantariCrestine',
         short_name: 'versuri',
-        description: 'Versuri Cantari Crestine',
+        description: 'VersuriCantariCrestine',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

@@ -1,7 +1,7 @@
 <template>
   <q-page padding class="row">
     <div style="width: 100%; max-width: auto;">
-      <q-infinite-scroll :handler="refresher">
+      <q-infinite-scroll>
           <q-item clickable v-ripple v-for="(item, index) in items" :key="index" class="caption">
             <q-item-section>
               <q-item-label>{{ index + 1 }}. {{ item.name }}</q-item-label>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { yaml } from 'yaml-js'
+console.log('aici >>>>>>>>>>>>')
 export default {
   data () {
     return {
